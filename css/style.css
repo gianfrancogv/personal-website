@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+}
+
+* { 
+    font-family: 'Raleway', sans-serif;
+}
+
+.main {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 720px;
+    align-items: center;
+}
+
+.main h1 {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    font-size: 26pt;
+    font-weight: lighter;
+}
+
+.main h1 strong {
+    color: white;
+}
+
+.main button {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14pt;
+    padding: 15px;
+    color: white;
+    background: rgba(0,0,0,0.1);
+    border: 2px solid white;
+}
+
+.main button:hover {
+    background: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+.main button {
+    transition: background 0.8s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.smart-scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+  .scrolled-down{
+     transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+     transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
+
+/*Section*/
+
+.about {
+    text-align: center;
+    animation-name: arriveAbout;
+    animation-duration: 0.8s;
+}
+
+.skills {
+    animation-name: arriveTools;
+    animation-duration: 0.8s;
+}
+
+.tools {
+    animation-name: arriveTools;
+    animation-duration: 0.8s;
+}
+
+.tools div {
+    background-color: #f1f0f0;
+    list-style-type: none;
+    margin: 8px;
+}
+
+.tools h3 {
+    color: #3fc1c9;
+    font-size: 16pt;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+section h2 {
+    color: #6c8199;
+    font-weight: bold;
+}
+
+.tool-name {
+    background-color: #3fc1c9;
+    font-weight: bold;
+    color: white;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.fill {
+    background-color: #6c8199;
+    animation-name: fillLevel;
+    animation-duration: 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+}
+
+@keyframes arriveAbout {
+    from {position: relative; right: 100px; opacity: 0;}
+    to {position: relative; right: 0px; opacity: 1;}
+}
+
+@keyframes arriveTools {
+    from {position: relative; left: 500px; opacity: 0;}
+    to {position: relative; left: 0px; opacity: 1;}
+}
+
+@keyframes fillLevel {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@media (max-width: 1200px) {
+    .skills, .tools {
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about img {
+        max-width: 300px;
+    }
+
+    .about p {
+        margin: 0px 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .level {
+        display: none;
+    }
+
+    .fill {
+        margin-right: 0px;
+    }
+}
