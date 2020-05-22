@@ -89,7 +89,7 @@ section h2 {
 .about {
     text-align: center;
     animation-name: arriveAbout;
-    animation-duration: 1.3s;
+    animation-duration: 1s;
 }
 
 .about img {
@@ -103,13 +103,13 @@ section h2 {
 
 .skills {
     animation-name: arriveTools;
-    animation-duration: 1.3s;
+    animation-duration: 1s;
     margin-left: 60px;
 }
 
 .tools {
     animation-name: arriveTools;
-    animation-duration: 1.3s;
+    animation-duration: 1s;
 }
 
 .tools div {
@@ -139,8 +139,8 @@ section h2 {
 .fill {
     background-color: #6c8199;
     animation-name: fillLevel;
-    animation-duration: 2s;
-    animation-delay: 1.3s;
+    animation-duration: 1s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -158,4 +158,14 @@ section h2 {
     0% {width: 0;}
     0.1% {opacity: 100%;}
     100% {opacity: 100%;};
+}
+
+@media (max-width: 991px) {
+    .skills, .tools div, .tools h3 {
+        margin-left: 0px;
+    }
+
+    .skills {
+        margin-top: 20px;
+    }
 }
