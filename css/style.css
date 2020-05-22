@@ -79,6 +79,7 @@ body {
 
 section {
     margin: 20px 180px;
+    height: 720px;
 }
 
 section h2 {
@@ -167,5 +168,13 @@ section h2 {
 
     .skills {
         margin-top: 20px;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    .about img {
+        width: 250px;
     }
 }
