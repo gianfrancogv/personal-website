@@ -93,8 +93,12 @@ section h2 {
 }
 
 .about img {
-    max-width: 300px;
+    width: 350px;
     margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 0px;
 }
 
 .skills {
