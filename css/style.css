@@ -91,7 +91,7 @@ body {
 /*Section*/
 
 section, article {
-    margin: 20px 180px;
+    margin: 0px 180px;
     min-height: 720px;
 }
 
@@ -180,10 +180,13 @@ article li {
     list-style-type: none;
 }
 
+article ul {
+    padding-left: 0px;
+}
+
 article h2, article h3 {
     color: #6c8199;
     font-weight: 900;
-    margin-left: 15px;
     text-decoration: underline; 
 }
 
