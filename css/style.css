@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 720px;
+    min-height: 720px;
     align-items: center;
 }
 
@@ -25,6 +25,7 @@ body {
     text-align: center;
     font-size: 26pt;
     font-weight: lighter;
+    padding: 15px;
 }
 
 .main h1 strong {
@@ -75,11 +76,23 @@ body {
     transform:translateY(0); transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 720px) {
+    .main h1 {
+        font-size: 18pt;
+        margin: 20px;
+        padding: 0px;
+    }
+
+    .main button {
+        font-size: 12pt;
+    }
+}
+
 /*Section*/
 
-section {
+section, article {
     margin: 20px 180px;
-    height: 720px;
+    min-height: 720px;
 }
 
 section h2 {
@@ -89,7 +102,7 @@ section h2 {
 
 .about {
     text-align: center;
-    animation-name: arriveAbout;
+    animation-name: arriveLeft;
     animation-duration: 1s;
 }
 
@@ -103,13 +116,13 @@ section h2 {
 }
 
 .skills {
-    animation-name: arriveTools;
+    animation-name: arriveRight;
     animation-duration: 1s;
     margin-left: 60px;
 }
 
 .tools {
-    animation-name: arriveTools;
+    animation-name: arriveRight;
     animation-duration: 1s;
 }
 
@@ -145,12 +158,12 @@ section h2 {
     animation-fill-mode: forwards;
 }
 
-@keyframes arriveAbout {
+@keyframes arriveLeft {
     from {position: relative; right: 100px; opacity: 0;}
     to {position: relative; right: 0px; opacity: 1;}
 }
 
-@keyframes arriveTools {
+@keyframes arriveRight {
     from {position: relative; left: 500px; opacity: 0;}
     to {position: relative; left: 0px; opacity: 1;}
 }
@@ -161,20 +174,59 @@ section h2 {
     100% {opacity: 100%;};
 }
 
+/*Article*/
+
+article li {
+    list-style-type: none;
+}
+
+article h2, article h3 {
+    color: #6c8199;
+    font-weight: 900;
+    margin-left: 15px;
+    text-decoration: underline; 
+}
+
+article h4 {
+    color: #3fc1c9;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+article h5, article .h5 {
+    font-style: italic;
+    color: rgb(141, 141, 141);
+    font-size: 11pt;
+}
+
+article h6 {
+    color: rgb(94, 94, 94);
+    font-size: 11pt;
+}
+
+.education-experience {
+    animation-name: arriveLeft;
+    animation-duration: 1s;
+}
+
+.courses-languages {
+    animation-name: arriveRight;
+    animation-duration: 1s;
+}
+
 @media (max-width: 991px) {
+    section, article {
+        margin: 20px;
+    }
+
+    .about img {
+        width: 250px;
+    }
     .skills, .tools div, .tools h3 {
         margin-left: 0px;
     }
 
     .skills {
         margin-top: 20px;
-    }
-
-    section {
-        margin: 20px;
-    }
-
-    .about img {
-        width: 250px;
     }
 }
