@@ -90,10 +90,10 @@ body {
 
 /*Section*/
 
-section, article {
+/* section, article {
     margin: 0px 180px;
     min-height: 720px;
-}
+} */
 
 section h2 {
     color: #6c8199;
@@ -215,6 +215,17 @@ article h6 {
 .courses-languages {
     animation-name: arriveRight;
     animation-duration: 1s;
+}
+
+/*Portfolio*/
+
+.portfolio {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.card-body {
+    padding: 0.5rem !important;
 }
 
 @media (max-width: 991px) {
