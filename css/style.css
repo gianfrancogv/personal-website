@@ -90,10 +90,10 @@ body {
 
 /*Section*/
 
-/* section, article {
+section, article {
     margin: 0px 180px;
-    min-height: 720px;
-} */
+    min-height: 670px;
+}
 
 section h2 {
     color: #6c8199;
@@ -220,12 +220,26 @@ article h6 {
 /*Portfolio*/
 
 .portfolio {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    margin: 0px 150px;
 }
 
-.card-body {
-    padding: 0.5rem !important;
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    margin: 10px;
+}
+
+.card p {
+    font-size: 10pt;
+}
+
+@media (max-width: 1295px) {
+    .portfolio {
+        margin: 0px 50px;
+    }
 }
 
 @media (max-width: 991px) {
