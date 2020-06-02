@@ -1,9 +1,19 @@
 body {
-    margin: 0;
+    position: relative;
 }
 
 * { 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section, article {
+    padding-top: 80px;
+    min-height: 720px;
+}
+
+ul {
+    padding-left: 0px;
 }
 
 /*main*/
@@ -20,7 +30,6 @@ body {
 }
 
 .main h1 {
-    font-family: 'Raleway', sans-serif;
     color: rgba(255,255,255,0.9);
     text-align: center;
     font-size: 26pt;
@@ -33,7 +42,6 @@ body {
 }
 
 .main button {
-    font-family: 'Raleway', sans-serif;
     font-size: 14pt;
     padding: 15px;
     color: white;
@@ -88,54 +96,30 @@ body {
     }
 }
 
-/*Section*/
+/*About & Skills*/
 
-section, article {
-    margin: 0px 180px;
-    min-height: 670px;
-}
-
-section h2 {
+.about h2, .skills h2 {
     color: #6c8199;
     font-weight: 900;
 }
 
 .about {
     text-align: center;
-    animation-name: arriveLeft;
-    animation-duration: 1s;
 }
 
 .about img {
-    width: 350px;
-    margin-bottom: 20px;
-}
-
-.about p {
-    margin-bottom: 0px;
-}
-
-.skills {
-    animation-name: arriveRight;
-    animation-duration: 1s;
-    margin-left: 60px;
-}
-
-.tools {
-    animation-name: arriveRight;
-    animation-duration: 1s;
+    width: 300px;
 }
 
 .tools div {
     background-color: #f1f0f0;
     list-style-type: none;
-    margin: 8px 0px 8px 60px;
+    margin: 8px 0px;
 }
 
 .tools h3 {
     color: #3fc1c9;
     font-size: 16pt;
-    margin-left: 60px;
     font-weight: bold;
 }
 
@@ -158,6 +142,16 @@ section h2 {
     animation-fill-mode: forwards;
 }
 
+.arriveLeft {
+    animation-name: arriveLeft;
+    animation-duration: 1s;
+}
+
+.arriveRight {
+    animation-name: arriveRight;
+    animation-duration: 1s;
+}
+
 @keyframes arriveLeft {
     from {position: relative; right: 100px; opacity: 0;}
     to {position: relative; right: 0px; opacity: 1;}
@@ -174,35 +168,30 @@ section h2 {
     100% {opacity: 100%;};
 }
 
-/*Article*/
+/*Education & Experience*/
 
-article li {
+.info li {
     list-style-type: none;
 }
 
-article ul {
-    padding-left: 0px;
-}
-
-article h2, article h3 {
+.info h2 {
     color: #6c8199;
     font-weight: 900;
-    text-decoration: underline; 
 }
 
-article h4 {
+.info h4 {
     color: #3fc1c9;
     font-size: 16pt;
     font-weight: bold;
 }
 
-article h5, article .h5 {
+.info h5, .info .dates {
     font-style: italic;
     color: rgb(141, 141, 141);
     font-size: 11pt;
 }
 
-article h6 {
+.info h6 {
     color: rgb(94, 94, 94);
     font-size: 11pt;
 }
@@ -220,41 +209,85 @@ article h6 {
 /*Portfolio*/
 
 .portfolio {
-    margin: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portfolio h2 {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.card {
-    margin: 10px;
+    color: #6c8199;
+    font-weight: 900;
 }
 
 .card p {
     font-size: 10pt;
 }
 
-@media (max-width: 1295px) {
-    .portfolio {
-        margin: 0px 50px;
-    }
+/*Contact*/
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
 }
 
-@media (max-width: 991px) {
-    section, article {
-        margin: 20px;
-    }
+.contact h2 {
+    color: #6c8199;
+    font-weight: 900;
+}
 
-    .about img {
-        width: 250px;
-    }
-    .skills, .tools div, .tools h3 {
-        margin-left: 0px;
-    }
+.contact h3 {
+    font-size: 14pt;
+    color: darkgray;
+}
 
-    .skills {
-        margin-top: 20px;
-    }
+.contact h6 {
+    text-align: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form button {
+    width: 100px;
+    margin: auto;
+    border: none;
+}
+
+.contact-form label input {
+    width: 300px;
+}
+
+.contact-form label textarea {
+    width: 300px;
+    min-height: 150px;
+}
+
+.back {
+    text-align: center;
+}
+
+.social ul {
+    display: flex;
+    justify-content: center;
+}
+
+.social ul li {
+    list-style-type: none;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+
+.social ul li img {
+    width: 30px;
+}
+
+#back-top {
+    font-size: 14pt;
+    border: none;
+    background-color: white;
 }
