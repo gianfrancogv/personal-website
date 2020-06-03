@@ -15,19 +15,6 @@ function scrollToTop (duration) {
     window.requestAnimationFrame(step);
 }
 
-document.addEventListener('scroll', function (e) {
-    var top  = window.pageYOffset + window.innerHeight,
-        isVisible = top > document.querySelector('.about').offsetTop,
-        isVisible = top > document.querySelector('.skills-tools').offsetTop;
-
-     if (isVisible) {
-       document.querySelector('.about').classList.add('arriveLeft');
-     }
-     if (isVisible) {
-       document.querySelector('.skills-tools').classList.add('arriveRight');
-     }
-});
-
 $(document).ready(function(){
     $('body').scrollspy({target: "body", offset: 80}); 
 

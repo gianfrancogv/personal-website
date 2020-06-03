@@ -9,11 +9,22 @@ body {
 
 section, article {
     padding-top: 80px;
+    margin: 0px 250px;
     min-height: 720px;
+}
+
+summary {
+    padding-top: 80px;
+    min-height: 580px;
 }
 
 ul {
     padding-left: 0px;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 /*main*/
@@ -42,20 +53,17 @@ ul {
 }
 
 .main button {
-    font-size: 14pt;
+    font-size: 15pt;
     padding: 15px;
     color: white;
     background: rgba(0,0,0,0.1);
     border: 2px solid white;
+    transition: 0.8s;
 }
 
 .main button:hover {
     background: rgba(0,0,0,0.4);
     cursor: pointer;
-}
-
-.main button {
-    transition: background 0.8s;
 }
 
 @keyframes gradient {
@@ -96,19 +104,37 @@ ul {
     }
 }
 
+/*Navbar*/
+
+.active {
+    background-color: #6c8199 !important;
+    color: white !important;
+    border-radius: 0 !important;
+    transition: 0.5s;
+}
+
+.navbar a:not(.active):hover {
+    color: #6c8199 !important;
+}
+
 /*About & Skills*/
+
+.about {
+    text-align: center;
+}
 
 .about h2, .skills h2 {
     color: #6c8199;
     font-weight: 900;
 }
 
-.about {
-    text-align: center;
+.about p {
+    color: rgb(141, 141, 141);
 }
 
 .about img {
     width: 300px;
+    padding: 20px;
 }
 
 .tools div {
@@ -142,32 +168,6 @@ ul {
     animation-fill-mode: forwards;
 }
 
-.arriveLeft {
-    animation-name: arriveLeft;
-    animation-duration: 1s;
-}
-
-.arriveRight {
-    animation-name: arriveRight;
-    animation-duration: 1s;
-}
-
-@keyframes arriveLeft {
-    from {position: relative; right: 100px; opacity: 0;}
-    to {position: relative; right: 0px; opacity: 1;}
-}
-
-@keyframes arriveRight {
-    from {position: relative; left: 500px; opacity: 0;}
-    to {position: relative; left: 0px; opacity: 1;}
-}
-
-@keyframes fillLevel {
-    0% {width: 0;}
-    0.1% {opacity: 100%;}
-    100% {opacity: 100%;};
-}
-
 /*Education & Experience*/
 
 .info li {
@@ -196,16 +196,6 @@ ul {
     font-size: 11pt;
 }
 
-.education-experience {
-    animation-name: arriveLeft;
-    animation-duration: 1s;
-}
-
-.courses-languages {
-    animation-name: arriveRight;
-    animation-duration: 1s;
-}
-
 /*Portfolio*/
 
 .portfolio {
@@ -220,8 +210,20 @@ ul {
     font-weight: 900;
 }
 
+.card {
+    margin: 5px;
+}
+
 .card p {
     font-size: 10pt;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    visibility: hidden;
+}
+
+.carousel-inner img:hover {
+    cursor: pointer;
 }
 
 /*Contact*/
@@ -230,7 +232,6 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 80px;
 }
 
 .contact h2 {
@@ -243,18 +244,24 @@ ul {
     color: darkgray;
 }
 
-.contact h6 {
-    text-align: center;
-}
 .contact-form {
     display: flex;
     flex-direction: column;
 }
 
 .contact-form button {
+    color: #6c8199;
     width: 100px;
     margin: auto;
-    border: none;
+    border: 1px #6c8199 solid;
+    padding: 8px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.contact-form button:hover {
+    background-color: #6c8199;
+    color: white;
 }
 
 .contact-form label input {
@@ -266,8 +273,25 @@ ul {
     min-height: 150px;
 }
 
+/*Footer*/
+
 .back {
     text-align: center;
+}
+
+#back-top {
+    width: 100px;
+    color: #6c8199;
+    border: 1px #6c8199 solid;
+    padding: 8px;
+    background-color: white;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+#back-top:hover {
+    background-color: #6c8199;
+    color: white;
 }
 
 .social ul {
@@ -277,17 +301,53 @@ ul {
 
 .social ul li {
     list-style-type: none;
-    border: 1px solid black;
     margin: 5px;
     padding: 10px;
 }
 
 .social ul li img {
     width: 30px;
+    transition: 0.3s;
 }
 
-#back-top {
-    font-size: 14pt;
-    border: none;
-    background-color: white;
+.social ul li img:hover {
+    width: 37px;
+}
+
+.footer h6 {
+    text-align: center;
+    font-size: 8pt;
+    color: #6c8199;
+}
+
+.footer ul {
+    margin-bottom: 0px;
+}
+
+/*Responsive*/
+
+@media (max-width: 1240px) {
+    section, article {
+        margin: 0px 150px;
+    }
+}
+
+@media (max-width: 760px) {
+    section, article {
+        margin: 0px 50px;
+    }
+}
+
+@media (max-width: 540px) {
+    section, article {
+        margin: 0px;
+    }
+}
+
+/*Animations*/
+
+@keyframes fillLevel {
+    0% {width: 0;}
+    0.1% {opacity: 100%;}
+    100% {opacity: 100%;};
 }
